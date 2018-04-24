@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 const requestPromiseNative = require('request-promise-native');
 module.exports.execute = execute;
 module.exports.isStar = true;
@@ -71,4 +72,14 @@ function parse(params) {
 function execute() {
     const args = process.argv.slice(2);
     return functions[args[0]](args.slice(1));
+=======
+module.exports.execute = execute;
+module.exports.isStar = true;
+
+function execute() {
+    // Внутри этой функции нужно получить и обработать аргументы командной строки
+    const args = process.argv;
+
+    return Promise.resolve('Это строка будет выведена на консоль');
+>>>>>>> 5f4cf1845c1af5b7029ce5c1e70f7ecde5aca0cf
 }

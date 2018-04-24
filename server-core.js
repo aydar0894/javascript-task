@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -38,3 +39,15 @@ app.all('*', function (request, responce) {
 });
 
 module.exports = app;
+=======
+const http = require('http');
+
+const server = http.createServer();
+
+server.on('request', (req, res) => {
+    // Тут нужно обработать запрос
+    res.end();
+});
+
+module.exports = server;
+>>>>>>> 5f4cf1845c1af5b7029ce5c1e70f7ecde5aca0cf
